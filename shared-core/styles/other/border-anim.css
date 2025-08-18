@@ -1,0 +1,41 @@
+.border-animation::after{
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(from var(--deg) at 50% 50%, hsl(from var(--text) h s l / 0.5) var(--os), transparent var(--os), transparent var(--of), hsl(from var(--text) h s l / 0.5) var(--of));
+    z-index: -2;
+    padding: 1px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 9px;
+    opacity: 0.8;
+    
+    /* foreanimation */
+    /* animation: spin 2s infinite linear; */
+
+}
+
+.border-animation::before {
+
+
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: 9px;
+    background-color: var(--bg-card);
+    z-index: 1;
+
+}
+.border-animation .content {
+
+
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+
+}

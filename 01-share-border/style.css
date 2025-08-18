@@ -1,0 +1,63 @@
+.wraper {
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 10px;
+
+}
+
+
+.cell {
+    --size: 175px;
+    --o: 0;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    background-color: var(--bg-card);
+    cursor: pointer
+}
+
+
+.share-border::before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: var(--y);
+    left: var(--x);
+    width: var(--size);
+    opacity: var(--o);
+    height: var(--size);
+    filter: blur(30px);
+    transition: opacity 0.3s;
+    background: radial-gradient(var(--text) 20%, transparent 60%);
+
+}
+
+.share-border::after {
+    content: '';
+    border-radius: 9px;
+    inset: 1px;
+    position: absolute;
+    background-color: var(--bg-card);
+    opacity: 1;
+    transition: 0.3s;
+    mask-image: url(../shared-core/designe/grain0.svg);
+    mask-size: 100% 100%;
+    mask-position: center;
+    mask-type: luminance;
+
+}
+
+.share-border .content {
+    border-radius: 9px;
+    inset: 1px;
+    position: absolute;
+    background-color: var(--bg-card);
+    transition: opacity 300ms;
+}
+.share-border:hover .content {
+    opacity: .3;
+}

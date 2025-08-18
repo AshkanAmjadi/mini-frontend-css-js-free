@@ -1,0 +1,46 @@
+html {
+    --base-color: hsl(234, 10%, 80%);
+
+
+
+    --secondary-color: hsl(from var(--base-color) h s calc(l + 15));
+    --primary-color: hsl(from var(--base-color) h s calc(l + 10));
+
+
+    --base-white: hsl(from var(--base-color) h s calc(l + 15));
+    --base-lighter: hsl(from var(--base-color) h s calc(l + 5));
+    --base-darker: hsl(from var(--base-color) h s calc(l - 5));
+    --base-black: hsl(from var(--base-color) h s calc(l - 10));
+
+
+    --bg: var(--base-color);
+    --bg-card: hsl(from var(--base-color) h s calc(l + 20));
+    --bg-elevated: hsl(from var(--base-color) h s calc(l - 10));
+    --text: hsl(from var(--base-color) h s calc(l - 70));
+    --text-muted: hsl(from var(--base-color) h s calc(l - 50));
+    --border: hsl(from var(--base-color) h s calc(l - 20));
+    --accent: hsl(147, 98%, 44%);
+    --shadow: 0 4px 24px hsl(from var(--base-color) h s calc(l - 50) / 0.07)
+}
+
+html.dark {
+    --base-color: hsl(210, 9%, 13%);
+
+    --secondary-color: hsl(from var(--base-color) h s calc(l - 2));
+    --primary-color: hsl(from var(--base-color) h s calc(l + 1));
+
+    --base-white: hsl(from var(--base-color) h s calc(l + 20));
+    --base-lighter: hsl(from var(--base-color) h s calc(l + 10));
+    --base-darker: hsl(from var(--base-color) h s calc(l - 5));
+    --base-black: hsl(from var(--base-color) h s calc(l - 10));
+
+
+    --bg: var(--base-color);
+    --bg-card: hsl(from var(--base-color) h s calc(l + 4));
+    --bg-elevated: hsl(from var(--base-color) h s calc(l + 9));
+    --text: hsl(from var(--base-color) h s calc(l + 80));
+    --text-muted: hsl(from var(--base-color) h s calc(l + 63));
+    --border: hsl(from var(--base-color) h s calc(l + 28));
+    --accent: hsl(147, 98%, 44%);
+    --shadow: 0 4px 24px hsl(from var(--base-color) h s calc(l + 80) / 0.09)
+}

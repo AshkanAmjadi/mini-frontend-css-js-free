@@ -1,0 +1,67 @@
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Mozilla Headline ;
+}
+
+:root {
+    --rippleSize: 150px;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    background-size: 60px 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    height: 100vh;
+
+}
+
+
+
+
+
+.box::before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: var(--y);
+    left: var(--x);
+    width: var(--rippleSize);
+    height: var(--rippleSize);
+    opacity: var(--o);
+    filter: blur(30px);
+    transition: opacity 0.3s;
+    background: radial-gradient(var(--ripple) 20%, transparent 60%);
+}
+
+.box .wraper {
+    border-radius: 4px;
+    overflow: hidden;
+    inset: 1px;
+    position: absolute;
+    opacity: 1;
+    background-color: var(--clr);
+    transition: 0.3s;
+
+}
+
+.box:hover .wraper {
+    opacity: .7;
+}
+
+.box #noice {
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.box:hover #noice {
+    opacity: 1;
+}
