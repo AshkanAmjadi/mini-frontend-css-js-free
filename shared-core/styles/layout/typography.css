@@ -1,23 +1,23 @@
 :root {
-    --xx-largest: calc(4vw + 14pt);
-    --x-largest: calc(1.2vw + 14pt);
-    --x-larger: calc(.9vw + 14pt);
-    --x-larg: calc(.6vw + 14pt);
-    --largest: calc(.4vw + 13pt);
-    --larger: calc(.4vw + 12pt);
-    --larg: calc(.4vw + 11pt);
-    --lg: calc(.4vw + 10pt);
-    --normal: calc(.4vw + 9pt);
-    --middle: calc(.4vw + 8.5pt);
-    --mid: calc(.3vw + 8.5pt);
-    --small: calc(.3vw + 8pt);
-    --smaller: calc(.2vw + 8pt);
-    --mini: calc(.2vw + 7.5pt);
-    --x-mini: calc(.2vw + 7pt);
-    --cell: calc(.2vw + 6.5pt);
-    --x-cell: calc(.2vw + 6pt);
-    --atom: calc(.2vw + 5.5pt);
-    --x-atom: calc(.2vw + 4.5pt);
+    --fs-xx-largest: calc(4vw + 14pt);
+    --fs-x-largest: calc(1.2vw + 14pt);
+    --fs-x-larger: calc(.9vw + 14pt);
+    --fs-x-larg: calc(.6vw + 14pt);
+    --fs-largest: calc(.4vw + 13pt);
+    --fs-larger: calc(.4vw + 12pt);
+    --fs-larg: calc(.4vw + 11pt);
+    --fs-lg: calc(.4vw + 10pt);
+    --fs-normal: calc(.4vw + 9pt);
+    --fs-middle: calc(.4vw + 8.5pt);
+    --fs-mid: calc(.3vw + 8.5pt);
+    --fs-small: calc(.3vw + 8pt);
+    --fs-smaller: calc(.2vw + 8pt);
+    --fs-mini: calc(.2vw + 7.5pt);
+    --fs-x-mini: calc(.2vw + 7pt);
+    --fs-cell: calc(.2vw + 6.5pt);
+    --fs-x-cell: calc(.2vw + 6pt);
+    --fs-atom: calc(.2vw + 5.5pt);
+    --fs-x-atom: calc(.2vw + 4.5pt);
 }
 
 

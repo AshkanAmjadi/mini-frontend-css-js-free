@@ -12,7 +12,7 @@
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    border-radius: 9px;
+    border-radius: var(--bdrs,9px);
     opacity: 0.8;
     
     /* foreanimation */
@@ -26,12 +26,13 @@
     content: '';
     position: absolute;
     inset: 1px;
-    border-radius: 9px;
+    border-radius: var(--bdrs,9px);
     background-color: var(--bg-card);
     z-index: 1;
 
 }
 .border-animation .content {
+
 
 
     position: relative;

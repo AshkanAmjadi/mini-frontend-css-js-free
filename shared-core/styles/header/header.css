@@ -3,11 +3,10 @@
     width: clamp(280px, 95vw, 1200px);
     height: 80px;
     position: fixed;
-    top: 20px;
-    padding:  20px;
+    top: 15px;
+    padding: 20px;
     gap: 20px;
     display: inline-flex;
-    overflow: hidden;
     border-radius: 10px;
     backdrop-filter: blur(8px);
     align-items: center;
@@ -19,10 +18,24 @@
 }
 
 #header #header-bg {
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+#header #header-bg,
+#header #header-bg span {
     inset: 0;
     position: absolute;
-    filter: url(#noise-filter-2);
-    opacity: 0.3;
+    overflow: hidden;
+
+}
+
+#header #header-bg span {
+    -webkit-filter: url(#noise-filter-2);
+
 }
 
 .darkBtn {
@@ -30,7 +43,7 @@
     padding: 10px 15px;
     color: var(--text);
     cursor: pointer;
-    font-size: var(--mini);
+    font-size: var(--fs-mini);
     border-radius: 10px;
     user-select: none;
     position: relative;
@@ -43,25 +56,146 @@
     content: '';
     position: absolute;
     inset: -1px;
+    z-index: -1;
 }
 
 #header .left,
 #header .right {
     flex: 0 1 auto;
     display: flex;
-    
+    align-items: center;
+    gap: 20px
+
 }
 
 #header .middle {
     flex: 1 1 auto;
 }
 
+#header .github {
+    padding: 5px;
+
+}
+
+#header .github svg {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    color: var(--text-muted);
+}
+
+#header .profile {
+    --w: 45px;
+    --h: 45px;
+    --p: 4px;
+    width: var(--w);
+    height: var(--h);
+    position: relative;
+    flex: 1 1 auto;
+}
+
+#header .profile .content {
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    width: var(--w);
+    max-width: var(--w);
+    background-color: var(--bg-card);
+    border-radius: calc(var(--w) / 2);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 300ms cubic-bezier(1, -0.01, 0, 0.98);
+    border-color: hsl(from var(--border) h s l / 0.4);
+    padding: var(--p);
+}
+
+#header .profile .content .profile-img {
+    transition: all 300ms cubic-bezier(1, -0.01, 0, 0.98), transform 1s;
+    width: calc(var(--w) - var(--p) * 2);
+    height: calc(var(--h) - var(--p) * 2);
+    min-width: calc(var(--w) - var(--p) * 2);
+    min-height: calc(var(--h) - var(--p) * 2);
+    overflow: hidden;
+    border-radius: calc(var(--w) / 2);
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+}
+
+#header .profile:focus .content {
+
+    --rippleSize: 100px;
+    width: clamp(200px, 80vw, 500px);
+    max-width: 500px;
+    border-radius: 10px;
+    cursor: auto;
+    border-width: 1px;
+    border-style: solid;
+    z-index: 2;
+    box-shadow: var();
+
+}
+
+#header .profile .content .head {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    color: var(--text);
+    pointer-events: none;
+
+}
+
+#header .profile .content .head div {
+    font-size: var(--fs-smaller);
+    min-width: max-content;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    transition: all 500ms 400ms cubic-bezier(0.09, 0.72, 0.14, 1.02);
+    padding-right: 0;
+    opacity: 0;
+}
+
+#header .profile:focus .content .head div {
+    opacity: 1;
+    padding-left: 10px;
+    min-width: max-content;
+}
+
+#header .profile .content .username {
+    font-size: var(--fs-small);
+    font-weight: 500;
+}
+
+#header .profile .content .sub {
+    font-size: var(--fs-mini);
+    color: var(--text-muted);
+}
+
+#header .profile:focus {
+    --p: 13px;
+}
+
+
+
+#header .profile:focus .profile-img {
+
+    width: calc(var(--w) * 1.5);
+    height: calc(var(--h) * 1.5);
+    min-width: calc(var(--w) * 1.5);
+    min-height: calc(var(--h) * 1.5);
+    border-radius: 10px;
+
+
+}
+
 
 @keyframes loadHeader {
-    
-    to{
+
+    to {
         opacity: 1;
     }
-    
+
 
 }

@@ -1,4 +1,5 @@
 import { noise2 } from "./svg/noise.js";
+import {github} from "./svg/other.js";
 
 let darkBtn = `
     <div class="darkBtn ripple border-animation" onclick="document.documentElement.classList.toggle('dark')">
@@ -9,21 +10,58 @@ let darkBtn = `
     `
 
 
+const details = `
+<div class="details">
+      
+      
+     
+      
+</div>
+`
+const head = `
+<div class="head">
+    <img class="profile-img" src="../shared-core/img/me/profile.jpg" alt="">
+    <div>
+    <p class="username">ashkan amjadi</p>
+    <p class="sub">full stack web developer 👨‍💻</p>
+    
+</div>
+</div>
+`
+
+const profile = `
+<div tabindex="-1" class="profile ">
+       
+       <div class="content ripple ">
+            ${head}
+           ${details}
+       </div>
+       </div>`
+
 const header =
     `
 <header id="header">
 
-      <span id="header-bg"></span>
+          
           
        <div class="left">
        
-</div>   
+       ${profile}
+       <a href="https://github.com/AshkanAmjadi" target="_blank" class="github">
+       ${github}
+</a>
+       
+       </div>   
        <div class="middle">
        
-</div>   
+        </div>   
        <div class="right">
        ${darkBtn}
-</div>   
+</div>  
+      <span id="header-bg">
+      <span class="noiseimg"></span>
+</span>
+ 
 </header>
 
 `
