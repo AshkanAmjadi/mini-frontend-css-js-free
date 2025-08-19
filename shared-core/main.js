@@ -4,7 +4,7 @@ import { createHeader } from "./scripts/Modules/header.js";
 import { initBordrAnimation } from "./scripts/Modules/border-animation.js";
 import { loadScript } from "./scripts/Modules/loader.js";
 import { makeRipple } from "./scripts/Modules/share-border.js";
-// import { noise  } from "./scripts/Modules/svg/noise.js";
+// import { delay } from "./scripts/Modules/helper/helper.js"
 
 
 
