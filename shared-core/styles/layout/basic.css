@@ -3,12 +3,17 @@ html{
     overflow-x: hidden;
 }
 
-* {
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family:Mozilla Headline ;
+
 }
+
 
 :root {
     --rippleSize: 150px;
@@ -22,6 +27,9 @@ body {
     align-items: center;
     padding: 2%;
     height: 100vh;
+    font-size: var(--fs-normal);
+    line-height: 1.6;
+    color: var(--text);
 
 }
 

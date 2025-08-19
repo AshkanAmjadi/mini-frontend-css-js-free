@@ -20,7 +20,44 @@ html {
     --text-muted: hsl(from var(--base-color) h s calc(l - 50));
     --border: hsl(from var(--base-color) h s calc(l - 20));
     --accent: hsl(147, 98%, 44%);
-    --shadow: 0 4px 24px hsl(from var(--base-color) h s calc(l - 50) / 0.07)
+    --shadow: 0 4px 24px hsl(from var(--base-color) h s calc(l - 50) / 0.07);
+
+
+
+
+
+
+
+     /* Additional framework colors */
+    --danger: hsl(0, 84%, 60%);
+    --warning: hsl(38, 92%, 50%);
+    --info: hsl(217, 91%, 60%);
+    --success: hsl(147, 98%, 44%);
+    
+    /* Border radius system */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
+    
+    /* Spacing system */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    
+    /* Z-index scale */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal: 1040;
+    --z-tooltip: 1070;
+
 }
 
 html.dark {
