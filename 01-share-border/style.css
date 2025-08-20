@@ -3,6 +3,26 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 10px;
+    
+}
+
+@media (max-width: 1285px) {
+
+    .wraper {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .wraper {
+
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    }
 
 }
 
@@ -13,11 +33,13 @@
     border-radius: 10px;
     position: relative;
     display: inline-block;
-    width: 150px;
-    height: 150px;
     overflow: hidden;
+    width: max(300px,20vw);
     background-color: var(--bg-card);
-    cursor: pointer
+    cursor: pointer;
+    opacity: 0;
+    padding: 1px;
+    animation: fadeIn .5s forwards;
 }
 
 
@@ -45,19 +67,23 @@
     opacity: 1;
     transition: 0.3s;
     mask-image: url(../shared-core/designe/grain0.svg);
-    mask-size: 100% 100%;
+    mask-size: 100% auto;
     mask-position: center;
-    mask-type: luminance;
+    /* mask-type: luminance; */
 
 }
 
 .share-border .content {
-    border-radius: 9px;
-    inset: 1px;
-    position: absolute;
+    position: relative;
+    z-index: 1;
+    padding: 25px;
+    transition: all 300ms;
     background-color: var(--bg-card);
-    transition: opacity 300ms;
+    border-radius: 9px;
 }
-.share-border:hover .content {
-    opacity: .3;
+
+.share-border .content:hover {
+    
+    background-color: hsl(from var(--bg-card) h s l / 0.5);
+    
 }
