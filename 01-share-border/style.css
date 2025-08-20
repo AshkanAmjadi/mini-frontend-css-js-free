@@ -34,11 +34,12 @@
     position: relative;
     display: inline-block;
     overflow: hidden;
-    width: max(300px,20vw);
+    width: min(350px,85vw);
     background-color: var(--bg-card);
     cursor: pointer;
     opacity: 0;
     padding: 1px;
+    transition: all 500ms;
     animation: fadeIn .5s forwards;
 }
 

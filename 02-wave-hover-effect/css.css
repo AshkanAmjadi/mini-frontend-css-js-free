@@ -11,17 +11,20 @@
     cursor: pointer;
     --clr:var(--bg-card);
     --o:0;
+    --radius : 10px ;
     position: relative;
     overflow: hidden;
-    width: 250px;
-    height: 60px;
+    width: min(500px , 75vw);
+    padding: 20px;
     background-color: var(--clr);
-    border-radius: 5px;
+    border-radius: var(--radius);
     transition: all 300ms;
+    opacity: 0;
+    animation: fadeIn .5s forwards;
 }
 .container .box.hover{
     /* background: #0284c7; */
-    scale: 1.4;
+    scale: 1.2;
     /* box-shadow: 0 0 10px var(--clr); */
     z-index: 2;
 }
@@ -30,7 +33,7 @@
 .container .box.n1{
     /* background: #0284c7; */
     /* box-shadow: 0 0 10px var(--clr); */
-    scale: 1.3;
+    scale: 1.1;
     z-index: 1;
 }
 
@@ -38,7 +41,7 @@
 .container .box.n2{
     /* background: #0284c7; */
     /* box-shadow: 0 0 10px var(--clr); */
-    scale: 1.1;
+    scale: 1.05;
 }
 
 
@@ -62,26 +65,21 @@
 
 .share-border::after {
     content: '';
-    border-radius: 5px;
+    border-radius:calc(var(--radius) - 1px);
     inset: 1px;
     position: absolute;
     background-color: var(--bg-card);
     opacity: 1;
     transition: 0.3s;
-    mask-image: url(../shared-core/designe/grain0.svg);
-    mask-size: 100% auto;
-    mask-position: center;
-    mask-type: luminance;
+    
+
+}
+.share-border:hover:after {
+    background-color: hsl(from var(--accent) h s l);
 
 }
 
 .share-border .content {
-    border-radius: 4px;
-    inset: 1px;
-    position: absolute;
-    background-color: var(--bg-card);
-    transition: opacity 300ms;
-}
-.share-border:hover .content {
-    opacity: .3;
+   position: relative;
+   z-index: 1;
 }

@@ -29,3 +29,7 @@ window.addEventListener("load", (e) => {
 });
 
 
+
+document.querySelectorAll('.box').forEach((el, idx) => {
+  el.style.animationDelay = (idx * 0.08) + 's'; // ۰.۱۲ ثانیه به ازای هر آیتم
+});
