@@ -1,3 +1,7 @@
+
+![my git hub head image](./img/mini-projects.png)
+
+
 A growing collection of creative **HTML**, **CSS**, and **JavaScript** mini‑projects, all sharing a common core for easy management and contribution.
 
 ----------
