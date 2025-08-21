@@ -5,7 +5,9 @@
 A growing collection of creative **HTML**, **CSS**, and **JavaScript** mini‑projects, all sharing a common core for easy management and contribution.
 
 
-<img style="max-width : 200px" src="./img/fa.png">
+<a href="./README-FA.md">
+  <img src="./img/fa.png" alt="readme-fa" width="200px">
+</a>
 
 ----------
 
