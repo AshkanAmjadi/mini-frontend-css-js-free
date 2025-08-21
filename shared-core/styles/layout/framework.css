@@ -40,6 +40,7 @@ body {
 }
 
 
+.text-cell { font-size: var(--fs-cell); }
 .text-xs { font-size: var(--fs-mini); }
 .text-sm { font-size: var(--fs-small); }
 .text-md { font-size: var(--fs-normal); }
@@ -246,11 +247,18 @@ body {
 }
 
 /* Icon System */
-.icon {
-    width: 1em;
-    height: 1em;
+:is([class^='icon']) {
+    display: flex;
+    align-items: center;
+    min-width: 1em;
+    min-height: 1em;
     fill: currentColor;
     vertical-align: middle;
+}
+
+:has([class^='icon']) svg{
+
+    width: 100%;
 }
 
 .icon-sm { width: 0.875em; height: 0.875em; }
@@ -460,8 +468,6 @@ body {
     display: inline-flex;
     align-items: center;
     padding: var(--space-xs) var(--space-sm);
-    font-size: var(--fs-small);
-    font-weight: 500;
     border-radius: var(--radius-full);
     background: var(--base-lighter);
     color: var(--text);

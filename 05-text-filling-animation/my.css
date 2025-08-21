@@ -1,0 +1,29 @@
+
+.text{
+    width: clamp(400px,50vw,800px);
+    background-color: var(--bg-card);
+    border-radius: 5px;
+    position: relative;
+    color: unset;
+    opacity: 0;
+    padding: 40px;
+    animation: fadeIn 300ms both;
+    animation-delay: 100ms;
+}
+.text span{
+    color: var(--text-muted);
+    font-weight: 700;
+    transition: 200ms;
+    opacity: .3;
+}
+.text i{
+    display: block;
+    position: absolute;
+    background-color: #ff8800;
+    transition: 100ms;
+    width: 2px;
+    height: 20px;
+    top :20px;
+    left: 20px;
+    opacity: 0;
+}
