@@ -4,6 +4,9 @@
 
 A growing collection of creative **HTML**, **CSS**, and **JavaScript** mini‑projects, all sharing a common core for easy management and contribution.
 
+
+<img style="max-width : 200px" src="./img/fa.png">
+
 ----------
 
 ## 🚀 About This Repository
@@ -64,3 +67,8 @@ We welcome contributions of all sizes!
 ----------
 
 **Let’s make something awesome — one mini project at a time!**
+
+
+----------
+
+<details><summary style="cursor: pointer">Toggle me!</summary>Peek a boo!</details>
