@@ -1,0 +1,67 @@
+body{
+    flex-wrap: wrap;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+
+.magnet{
+
+    --trx : 0px;
+    --try : 0px;
+    --x-sh : 0px;
+    --y-sh : 0px;
+    --bxSize : 0px;
+
+    position: relative;
+    background-color: var(--bg-card);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 5em;
+    border-radius: 10px;
+    color: var(--clr);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    text-shadow: 0 0 var(--bxSize) var(--clr);
+    box-shadow: var(--x-sh) var(--y-sh) 0 var(--clr);
+    transform: translate(var(--trx) , var(--try));
+    transition: 0.25s ease-out;
+    overflow: hidden;
+}
+
+
+.noice{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+
+.magnet::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: var(--y);
+    left: var(--x);
+    width:var(--rippleSize);
+    height:var(--rippleSize);
+    opacity: var(--o);
+    filter: blur(30px);
+    transition:opacity 0.3s;
+    background: radial-gradient(var(--ripple) 20%  ,transparent 60%);
+    z-index: -1;
+}
