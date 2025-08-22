@@ -44,7 +44,7 @@ window.addEventListener("load", (e) => {
 
 
 
-  }, 10);
+  }, 200);
 });
 
 function splitText() {
