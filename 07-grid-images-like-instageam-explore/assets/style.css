@@ -1,0 +1,15 @@
+
+
+
+
+.cul{ 
+    width: min(97vw,1200px);
+    column-count: 3;
+    column-gap: 10px;
+}
+.cul img{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
