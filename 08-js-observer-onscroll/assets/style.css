@@ -1,0 +1,28 @@
+body{
+    height: auto ;
+    
+}
+.container {
+    width: clamp(200px , 100% , 800px );
+    height: auto;
+    
+}
+.item {
+
+    padding: 30px;
+    opacity: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    transition: 500ms ease-out;
+    transform: translateY(5px) scale(0.96);
+    border: 1px var(--border) solid;
+    
+
+}
+
+.item.show{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+}

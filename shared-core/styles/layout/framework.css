@@ -551,3 +551,20 @@ body {
     object-fit: cover;
 
 }
+
+
+.user.lg{
+    height: 80px;
+    width: 80px;
+    min-height: 80px;
+    min-width: 80px;
+
+}
+
+.user.xl{
+    height: 100px;
+    width: 100px;
+    min-height: 100px;
+    min-width: 100px;
+
+}
