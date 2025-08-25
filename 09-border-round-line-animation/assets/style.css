@@ -1,0 +1,89 @@
+.shape {
+
+    width: clamp(50px, 100%, 300px);
+    padding: clamp(20px, 8vw, 40px);
+    /* padding: min(30px,4vw); */
+    /* padding: max(20px,6vw); */
+    border-radius: 10px;
+
+
+
+}
+
+
+/* for setting animation you must un comment this an below animation property */
+/* @property --deg{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+} */
+
+.bx {
+    /* --deg : 0deg;
+    --os: 0%;
+    --of: 100%; */
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+
+.bx .content {
+    position: relative;;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bx::after{
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: conic-gradient(from var(--deg) at 50% 50%, hsl(from var(--text) h s l / 0.5) var(--os), transparent var(--os), transparent var(--of), hsl(from var(--text) h s l / 0.5) var(--of));
+    z-index: -1;
+    padding: 1px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 11px;
+    
+    /* foreanimation */
+    /* animation: spin 2s infinite linear; */
+
+}
+
+.bx::before {
+
+
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: 10px;
+    background-color: var(--bg-card);
+
+}
+
+@keyframes spin{
+
+    0%{
+
+        --deg : 0deg;
+    }
+
+    100%{
+
+        --deg : 360deg;
+
+    }
+
+}
