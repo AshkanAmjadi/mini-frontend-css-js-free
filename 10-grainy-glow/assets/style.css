@@ -1,0 +1,62 @@
+
+body{
+    min-height: 100vh;
+}
+
+@property --end {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 20%;
+}
+
+@property --start {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+
+@property --midle {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 10%;
+}
+
+
+.glow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-image: radial-gradient(75% 75% at 50% 50%, transparent var(--start), var(--border) var(--midle), transparent var(--end));
+    scale: 1;
+    z-index: 1;
+    opacity: 0;
+    translate: -50% -50%;
+    scale: 1;
+    animation: riple .7s ease-out;
+    mask-image: url(../../shared-core/designe/nnnoise.svg);
+    mask-type: luminance;
+    pointer-events: none;
+}
+
+
+
+@keyframes riple {
+
+    0% {
+        opacity: 0;
+    }
+
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        --end: 70%;
+        --start: 10%;
+        --midle: 40%;
+    }
+
+}
