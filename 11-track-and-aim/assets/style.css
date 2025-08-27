@@ -1,0 +1,25 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(10 , 1fr);
+    gap: 5px;
+}
+
+.grid .cell{
+    width:40px;
+    height: 40px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--border);
+    transition: background-color 0.5s ease ;
+}
+.grid .cell.active{
+    background-color: var(--accent);
+}
+
+
+@media screen and (max-width: 900px) {
+.grid .cell{
+    width:30px;
+    height: 30px;
+}
+}
